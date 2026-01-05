@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NutriLens – Understand Your Food Instantly</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="hero-content">
+      <div class="brand">NutriLens</div>
+      <h1>Understand Your Food. Instantly.</h1>
+      <p>
+        Personalized AI insights for food choices—right when decisions matter.
+      </p>
+      <button onclick="document.getElementById('ai').scrollIntoView()">
+        🚀 Try the AI
+      </button>
+    </div>
+  </header>
+
+  <!-- AI INTERFACE -->
+  <section id="ai" class="section ai-section">
+    <h2>Scan or Search Ingredients</h2>
+    <p class="subtitle">
+      Enter a food item or scan the ingredient label.  
+      Insights are tailored to <b>you</b>.
+    </p>
+
+    <div class="ai-card">
+
+      <!-- PERSONALIZATION -->
+      <div class="personalize">
+        <input type="number" id="ageInput" placeholder="🎂 Age (optional)" />
+        <select id="goalInput">
+          <option value="">🎯 Health goal (optional)</option>
+          <option value="fitness">Fitness / Muscle</option>
+          <option value="weight">Weight Management</option>
+          <option value="digestion">Better Digestion</option>
+          <option value="energy">More Energy</option>
+        </select>
+      </div>
+
+      <!-- TEXT INPUT -->
+      <input
+        type="text"
+        id="itemInput"
+        placeholder="🔍 Example: Maggi Noodles, Milk, Cold Drink"
+      />
+      <button class="primary" onclick="runAIWithText()">Analyze Item</button>
+
+      <div class="divider">OR</div>
+
+      <!-- IMAGE INPUT -->
+      <label class="upload-btn">
+        📸 Scan Ingredient Label
+        <input
+          type="file"
+          id="imageInput"
+          accept="image/*"
+          capture="environment"
+          onchange="runAIWithImage()"
+          hidden
+        />
+      </label>
+
+      <img id="preview" class="preview" />
+
+      <!-- OUTPUT -->
+      <div id="output" class="output"></div>
+
+      <!-- MEDICAL DISCLAIMER (INLINE) -->
+      <div class="disclaimer">
+        ⚠️ <b>Medical Disclaimer:</b>  
+        NutriLens provides general, educational information only.  
+        It is <b>not a substitute</b> for professional medical advice, diagnosis, or treatment.  
+        Always consult a qualified healthcare professional for medical concerns.
+      </div>
+
+      <!-- FOLLOW-UP -->
+      <div id="followup" class="followup hidden">
+        <p class="followup-title">
+          What would you like to know more about?
+        </p>
+        <div class="followup-buttons">
+          <button onclick="followUp('healthy')">🥗 Is it healthy?</button>
+          <button onclick="followUp('effects')">
+            🧠 How does it affect / benefit me?
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>
+      © 2026 NutriLens · AI-Native Consumer Health  
+      <br />
+      Information provided is for educational purposes only and should not be considered medical advice.
+    </p>
+  </footer>
+
+  <script src="ai.js"></script>
+</body>
+</html>
+
+
