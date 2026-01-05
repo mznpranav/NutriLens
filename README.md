@@ -21,7 +21,7 @@ understand food ingredients instantly—right when decisions matter.
 1. Clone the repository
 2. Open `index.html` in your browser
 3. Start exploring food insights
-4. Or you can simply open it using this link- https://visionary-haupia-c569dc.netlify.app/
+4. Or you can simply open it using this link- https://astonishing-gaufre-368889.netlify.app/
 
 ## ⚠️ Disclaimer
 NutriLens provides educational information only and is not medical advice.
